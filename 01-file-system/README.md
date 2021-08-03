@@ -34,7 +34,10 @@ ls -r
 
 ```bash
 /usr/bin
+cd ../../usr/bin
+
 /usr/share/lib/terminfo
+cd /usr/share/lib/terminfo
 /etc
 ```
 
@@ -49,37 +52,58 @@ ls -r
 /home/system/destroyer/droid
 /home/user1
 /home/user1/somedir
-```
+
+home ||
+```  | --system
+     |    |__destroyer
+     |	  |   |__droid
+     |    |__hoth
+     |        |__base
+     |	      |__ planet
+     |	
+     |_ user1
+        |____somedir
 
 3. Find out what directory you are in.
-
+ /home/vagrant
 4. What is the quickest way of getting back to your home directory? Execute the command.
-
+cd ~
 5. The command touch allows you to create an empty file if it does not already exist, or update times if it does.
 
 6. Create a filename that has spaces in it.
+ touch "this has spaces"
 
 7. Are there any hidden files in your home directory?
+.bash_history, .bash_logout, .bash_profile, .bashrc, .ssh
 
 8. What is the largest file in your directory? How do you find it?
+ls -s shows the sizes
 
 9. Locate all the files in the /usr/bin and the /etc directory that begin with a p.
+find /usr/bin -name p*  and find /etc -name p*
 
 10. Locate files in the system that are of a character or block type. You will need to consult the manual pages for the command. Hint: you will need a –o option to look for more of the same criteria.
+ find / -type c ( for character devices)   find / -type b (for block devices)
 
 11. Copy the /etc/passwd file to your home directory.
+cd ~ to make sure youre at home and then cp /etc/passwd .
 
 12. Who owns the file? Can you delete it? If so, why? Could you delete the /etc/passwd file? If not why not?
+ root owns the file and i has read access for everyone other than root
 
 13. Make a directory in your home directory called newdir.
-
+mdkir newdir
 14. Create 3 files in the directory called file1, file2 and file3.
+touch ~/newdir/file{1..3}
 
 15. Rename the directory to olddir. Can you delete the directory? Which commands did you try?
+mv newdir olddir - yes if you rm -rf to force and recurrsively delete.
 
 16. How many entries are there in the /etc/passwd file, without manually counting them?
+ cat -b /etc/passwrd = 24 lines 
 
 17. What type of file is /etc/rc?
+file rc.d/ is a directory
 
 18. Try out these commands;
 
@@ -90,6 +114,7 @@ cat /etc/passwd /etc/hosts
 ```
 
 What happened?
+when cat the files it prints out the values to the console 
 
 19. Enter the following commands and observe what happens using commands like, ls –l, cat
 
@@ -98,9 +123,10 @@ cd
 touch "This file   ""		# 3 spaces after file
 ls –l				# Can you see the spaces?
 ```
+using ls-l you cannot see the spaces after
 
 Try the following command to identify the spaces:
 ```bash
 ls | od -c
 ```
-
+it spreads out the name and leaves blank places
