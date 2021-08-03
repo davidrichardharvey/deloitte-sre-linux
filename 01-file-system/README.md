@@ -26,7 +26,7 @@ Add, commit and push your changes in git, and then submit a pull request on gith
 		i. ls -la .
 		
 7. What option to ls will give me the file sizes in human readable format? Run the command on the /tmp directory.
-		i. -lh
+		i. -sh
 		
 8. What option will show just the size and filename, and how can you sort it by size.
 		i.  -sS
