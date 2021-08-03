@@ -12,7 +12,7 @@ who -q (who -u)
 2. Using the help facility how can you make the command show the time the system was last started
 uptime (who -r) (who -s)
 3. Using the date command display the date in the following format "Tue 09 Aug 2016 - 13:46 BST"
-%a %d %b %Y %c
+date + %a %d %b %Y %c
 4. Look for a command that will concatenate the output of a file to the screen (also known as standard output). Use that command to show the contents of the /etc/hosts file
 cat /etc/hosts
 5. What option to cat will show you the line numbers in the file?
