@@ -30,75 +30,84 @@ cd
 
 1. From your home directory and then each directory in turn work out a cd command that will provide a relative move to the following directories;
 
-```bash
-/usr/bin
-/usr/share/lib/terminfo
-/etc
-```
+```bash - cd /```bash
+/usr/bin - cd /usr/bin
+/usr/share/lib/terminfo - cd /usr/share/lib/terminfo 
+/etc - cd /etc
+``` - cd /```
 
 2. From the following absolute paths can you draw the tree structure?
 
 ```bash
 /home/system
+
 /home/system/hoth
-/home/system/hoth/base
-/home/system/hoth/planet
+/home/system/hoth/base , /home/system/hoth/planet
+
 /home/system/destroyer
 /home/system/destroyer/droid
+
 /home/user1
 /home/user1/somedir
 ```
 
-3. Find out what directory you are in.
+3. Find out what directory you are in. - pwd
 
-4. What is the quickest way of getting back to your home directory? Execute the command.
+4. What is the quickest way of getting back to your home directory? Execute the command. cd ~
 
-5. The command touch allows you to create an empty file if it does not already exist, or update times if it does.
+5. The command touch allows you to create an empty file if it does not already exist, or update times if it does. touch 
 
-6. Create a filename that has spaces in it.
+6. Create a filename that has spaces in it. touch file name
 
-7. Are there any hidden files in your home directory?
+7. Are there any hidden files in your home directory? .bash_history  .bash_profile    .ssh 
+..  .bash_logout   .bashrc        .lesshst
 
-8. What is the largest file in your directory? How do you find it?
+8. What is the largest file in your directory? How do you find it? ls -s , passwd
 
-9. Locate all the files in the /usr/bin and the /etc directory that begin with a p.
+9. Locate all the files in the /usr/bin and the /etc directory that begin with a p. find /usr/bin p*
 
 10. Locate files in the system that are of a character or block type. You will need to consult the manual pages for the command. Hint: you will need a –o option to look for more of the same criteria.
 
-11. Copy the /etc/passwd file to your home directory.
 
-12. Who owns the file? Can you delete it? If so, why? Could you delete the /etc/passwd file? If not why not?
+11. Copy the /etc/passwd file to your home directory. - cp /etc/passwd .
 
-13. Make a directory in your home directory called newdir.
+12. Who owns the file? Can you delete it? If so, why? Could you delete the /etc/passwd file? If not why not? root root,  no it is write protected
 
-14. Create 3 files in the directory called file1, file2 and file3.
+13. Make a directory in your home directory called newdir. - mkdir newdir
 
-15. Rename the directory to olddir. Can you delete the directory? Which commands did you try?
+14. Create 3 files in the directory called file1, file2 and file3. - touch file1 , touch file2, touch file3
 
-16. How many entries are there in the /etc/passwd file, without manually counting them?
+15. Rename the directory to olddir. Can you delete the directory? Which commands did you try? rm-r olddir
 
-17. What type of file is /etc/rc?
+16. How many entries are there in the /etc/passwd file, without manually counting them?  cat -b /etc/passwd - 24
+
+17. What type of file is /etc/rc? non existent
 
 18. Try out these commands;
 
-```bash
-cat /etc/passwd
-cat /etc/hosts
-cat /etc/passwd /etc/hosts
+```bash - syntax error
+cat /etc/passwd - shows the tree
+cat /etc/hosts - local host domains
+cat /etc/passwd /etc/hosts - same as cat /etc/hosts
 ```
 
 What happened?
 
 19. Enter the following commands and observe what happens using commands like, ls –l, cat
 
-```bash
-cd
-touch "This file   ""		# 3 spaces after file
-ls –l				# Can you see the spaces?
+```bash - error
+cd - no such file or directory
+touch "This file   ""		# 3 spaces after file - saves as seperate files
+ls –l				# Can you see the spaces? - no
 ```
 
 Try the following command to identify the spaces:
 ```bash
-ls | od -c
+ls | od - 
+
+c0000000   e   x   a   m   p   l   e   -   f   i   l   e  \n   f   i   l
+0000020   e  \n   p   a   s   s   w   d  \n   t   e   s   t  \n   t   e
+0000040   s   t   -   2  \n   t   h   i   s  \n
+
 ```
 
