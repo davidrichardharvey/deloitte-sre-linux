@@ -7,7 +7,7 @@ Add, commit and push your changes in git, and then submit a pull request on gith
 
 ## Questions
 
-1. Display all the users currently logged on to your system
+1. Display all the users currently logged on to your system - who
 
 2. Using the help facility how can you make the command show the time the system was last started
 
