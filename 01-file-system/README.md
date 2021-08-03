@@ -32,8 +32,9 @@ Add, commit and push your changes in git, and then submit a pull request on gith
 	**ls -sS**
 
 9. The output from your answer in 8 would have been from highest to lowest. Is there an option to reverse the order?
-<<<<<<< HEAD
 	**ls -sSr**
+<<<<<<< HEAD
+	
 =======
 
 ## Manipulation Questions
