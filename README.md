@@ -5,6 +5,6 @@
 4. cat /etc/hosts
 5. cat -n
 6. ls -a
-7. ls -lh
+7. ls -lh /tmp
 8. ls -lh -S
 9. Yes there is. The command is ls -lh -S -r
