@@ -34,6 +34,10 @@ Add, commit and push your changes in git, and then submit a pull request on gith
 /usr/share/lib/terminfo
 /etc
 ```
+cd ..
+cd usr ; cd bin
+cd usr ; cd share ; cd lib ; cd terminfo
+cd etc
 
 2. From the following absolute paths can you draw the tree structure?
 
@@ -47,18 +51,27 @@ Add, commit and push your changes in git, and then submit a pull request on gith
 /home/user1
 /home/user1/somedir
 ```
+home---system---hoth---base
+    ｜       ｜     ｜
+    ｜       ｜     ｜---planet
+    ｜       ｜
+    ｜       ｜---destroyer---droid
+    ｜
+    ｜---user 1---somedir
 
 3. Find out what directory you are in.
+pwd 
 
 4. What is the quickest way of getting back to your home directory? Execute the command.
+cd 
 
 5. The command touch allows you to create an empty file if it does not already exist, or update times if it does.
 
 6. Create a filename that has spaces in it.
 
-7. Are there any hidden files in your home directory?
+7. Are there any hidden files in your home directory? no
 
-8. What is the largest file in your directory? How do you find it?
+8. What is the largest file in your directory? How do you find it? ls -l
 
 9. Locate all the files in the /usr/bin and the /etc directory that begin with a p.
 
@@ -66,7 +79,7 @@ Add, commit and push your changes in git, and then submit a pull request on gith
 
 11. Copy the /etc/passwd file to your home directory.
 
-12. Who owns the file? Can you delete it? If so, why? Could you delete the /etc/passwd file? If not why not?
+12. Who owns the file? Can you delete it? If so, why? Could you delete the /etc/passwd file? If not why not? root
 
 13. Make a directory in your home directory called newdir.
 
@@ -74,9 +87,9 @@ Add, commit and push your changes in git, and then submit a pull request on gith
 
 15. Rename the directory to olddir. Can you delete the directory? Which commands did you try?
 
-16. How many entries are there in the /etc/passwd file, without manually counting them?
+16. How many entries are there in the /etc/passwd file, without manually counting them? 
 
-17. What type of file is /etc/rc?
+17. What type of file is /etc/rc? rc does not exist (only rc.d, rc0.d etc)
 
 18. Try out these commands;
 
