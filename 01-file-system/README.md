@@ -92,7 +92,7 @@ What happened?
 
 ```bash
 cd
-touch "This file   ""		# 3 spaces after file
+touch "This file   "		# 3 spaces after file
 ls –l				# Can you see the spaces?
 ```
 
