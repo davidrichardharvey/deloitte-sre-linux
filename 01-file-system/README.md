@@ -34,6 +34,12 @@ Add, commit and push your changes in git, and then submit a pull request on gith
 /usr/share/lib/terminfo
 /etc
 ```
+cd ../..
+cd /usr/bin/
+cd ..
+cd /share/lib/terminfo
+cd ../../../
+cd /etc
 
 2. From the following absolute paths can you draw the tree structure?
 
@@ -47,37 +53,49 @@ Add, commit and push your changes in git, and then submit a pull request on gith
 /home/user1
 /home/user1/somedir
 ```
+home
+|-----------------------------------------------|
+system 						user1
+|--------------------------|			|
+hoth	    		destroyer		somedir
+|---------|		   |
+base	planet		 droid
+
 
 3. Find out what directory you are in.
-
+pwd
 4. What is the quickest way of getting back to your home directory? Execute the command.
-
+cd ~
 5. The command touch allows you to create an empty file if it does not already exist, or update times if it does.
 
 6. Create a filename that has spaces in it.
-
+touch test\ file
 7. Are there any hidden files in your home directory?
-
+ls -a
 8. What is the largest file in your directory? How do you find it?
-
+?
 9. Locate all the files in the /usr/bin and the /etc directory that begin with a p.
-
+find /usr/bin -name 'p*' find /etc -name 'p*'
 10. Locate files in the system that are of a character or block type. You will need to consult the manual pages for the command. Hint: you will need a –o option to look for more of the same criteria.
-
+?
 11. Copy the /etc/passwd file to your home directory.
-
+cp /etc/passwd /home
+permission denied
 12. Who owns the file? Can you delete it? If so, why? Could you delete the /etc/passwd file? If not why not?
-
+ls -l
 13. Make a directory in your home directory called newdir.
-
+mkdir newdir
 14. Create 3 files in the directory called file1, file2 and file3.
-
+touch file1 file2 file3
 15. Rename the directory to olddir. Can you delete the directory? Which commands did you try?
-
+mv newdir olddir
+rm -r olddir
+(use -r for directories)
 16. How many entries are there in the /etc/passwd file, without manually counting them?
-
+cat -b passwd
+24
 17. What type of file is /etc/rc?
-
+The file does not exist
 18. Try out these commands;
 
 ```bash
@@ -87,7 +105,9 @@ cat /etc/passwd /etc/hosts
 ```
 
 What happened?
-
+Listed the entries in passwd
+Listed the entries in hosts
+Listed the entries in passwd and then the entries in hosts
 19. Enter the following commands and observe what happens using commands like, ls –l, cat
 
 ```bash
